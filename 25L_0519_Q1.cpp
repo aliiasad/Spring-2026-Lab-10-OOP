@@ -361,7 +361,7 @@ int main()  {
     cout << endl;
 
     Human shizuka("Shizuka", &gadgets[0]);
-    Human gian("Gian",       &gadgets[n - 1]);
+    Human gian("Gian", &gadgets[n - 1]);
 
     cout << "--- Humans ---" << endl;
     shizuka.display();
@@ -375,12 +375,8 @@ int main()  {
     nobita.display();
     cout << endl;
 
-    // Step 7: Create robots, add owned and shared gadgets
     Robot doraemon("Doraemon");
-    doraemon.addOwnedGadget(301, "Translator Tool", true)
-            .addOwnedGadget(302, "Time Freezer",    false)
-            .addSharedGadget(&gadgets[0])
-            .addSharedGadget(&gadgets[n - 1]);
+    doraemon.addOwnedGadget(301, "Translator Tool", true).addOwnedGadget(302, "Time Freezer", false).addSharedGadget(&gadgets[0]).addSharedGadget(&gadgets[n - 1]);
 
     Robot dorami("Dorami");
     dorami.addOwnedGadget(401, "Moshi Moshi Hat", true)
